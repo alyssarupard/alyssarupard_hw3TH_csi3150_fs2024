@@ -3,120 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alaska Tour & Travel</title>
+    <title>Detroit</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
+    <header class="header" id="home">
+        <img src="img/cityLogo.svg" class="center" alt="City Logo">
+        <h1 class="title">Come See the Motor City</h1>
+        <a href="#intro" class="arrow-down">&#8897;</a> <!-- Arrow leading to next section -->
+    </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>The Journey</h1>
-            <h2>Alaska</h2>
-            <p>Tour & Travel</p>
-            <a href="#intro" class="scroll-down">▼</a>
-        </div>
+    <!-- Intro Section -->
+    <section class="intro" id="intro">
+        <h2>Is a trip to Detroit on your list?</h2>
+        <p>Explore Detroit's rich culture and vibrant attractions. From the iconic Detroit Riverwalk to the historic Belle Isle, there's something for everyone. Discover the heart of the Motor City and all it has to offer!</p>
+        <a href="#destinations" class="button">Read More</a>
     </section>
 
-    <!-- Introduction Section -->
-    <section id="intro">
-        <div class="intro-content">
-            <h3>Is a trip to Alaska on your list?</h3>
-            <p>Alaska Tour & Travel is here to help with an adventurous list of amazing tours...</p>
-            <img src="img/alaskamountain.jpeg" alt="Alaska Mountain">
-            <a href="#details" class="cta-button">Read More</a>
-        </div>
-    </section>
-
-    <!-- Experiences Section -->
-    <section id="experiences">
-        <h3>Experience Kenai Fjords & Denali Park</h3>
-        <div class="experience-cards">
+    <!-- Destinations Section -->
+    <section class="destinations" id="destinations">
+        <h2>Explore Our Top Attractions</h2>
+        <div class="cards">
+            <!-- Attraction 1 -->
             <div class="card">
-                <img src="img/tour1.jpeg" alt="Anchorage Brews Tour">
-                <p>Anchorage Brews Tour</p>
+                <img src="img/detroitPrincess.jpeg" alt="Detroit Princess">
+                <h3>The Detroit Princess</h3>
+                <input type="checkbox" id="toggle1" class="toggle">
+                <label for="toggle1" class="arrow">&#8897;</label>
+                <p class="description">
+                    The Detroit Princess has been entertaining Detroit since 2005, docked near Hart Plaza.
+                </p>
             </div>
+            <!-- Attraction 2 -->
             <div class="card">
-                <img src="img/tour2.jpeg" alt="Anchorage City Tour">
-                <p>Anchorage City Tour</p>
+                <img src="img/BelleIsle.jpeg" alt="Belle Isle">
+                <h3>Belle Isle Park</h3>
+                <input type="checkbox" id="toggle2" class="toggle">
+                <label for="toggle2" class="arrow">&#8897;</label>
+                <p class="description">
+                    Belle Isle Park is a 985-acre island park rich with natural beauty and history.
+                </p>
             </div>
+            <!-- Attraction 3 -->
             <div class="card">
-                <img src="img/tour3.jpeg" alt="Anchorage Museum">
-                <p>Anchorage Museum</p>
+                <img src="img/riverwalk.jpeg" alt="Detroit Riverwalk">
+                <h3>Detroit Riverwalk</h3>
+                <input type="checkbox" id="toggle3" class="toggle">
+                <label for="toggle3" class="arrow">&#8897;</label>
+                <p class="description">
+                    Take a stroll or bike ride along the Detroit Riverwalk, offering views of Detroit and Canada.
+                </p>
             </div>
         </div>
+        <a href="#testimonial" class="arrow-down">&#8897;</a> <!-- Arrow to next section -->
     </section>
 
-    <!-- Bears, Trains & Icebergs Section -->
-    <section id="bears-trains">
-        <h3>Bears, Trains & Icebergs with Rail from Anchorage</h3>
-        <p>Your Bears, Trains, and Icebergs adventure starts with a scenic ride...</p>
-        <ul>
-            <li><strong>What to Wear:</strong> Waterproof jacket, warm layers...</li>
-            <li><strong>Reservations:</strong> Call us to reserve your spot...</li>
-        </ul>
-    </section>
-
-    <!-- Statistics Section -->
-    <section id="statistics">
-        <div class="stat">
-            <h4>650</h4>
-            <p>Hotels to Stay</p>
-        </div>
-        <div class="stat">
-            <h4>1200</h4>
-            <p>Places to Visit</p>
-        </div>
-        <div class="stat">
-            <h4>800</h4>
-            <p>Resort Visitors</p>
-        </div>
-        <div class="stat">
-            <h4>100%</h4>
-            <p>Safe & Secure</p>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
+    <!-- Testimonial Section -->
+    <section class="testimonial" id="testimonial">
         <blockquote>
-            <p>"This was a fantastic experience, we saw so much wildlife..."</p>
-            <cite>Connor Quinn</cite>
+            "Visiting Detroit was an incredible experience. The history, the culture, the food—it all exceeded my expectations."
+            <cite>– Connor Quinn</cite>
         </blockquote>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <div class="gallery-item">
-            <img src="gallery1.jpg" alt="Campfire">
-        </div>
-        <div class="gallery-item">
-            <img src="gallery2.jpg" alt="Forest">
-        </div>
-        <div class="gallery-item">
-            <img src="gallery3.jpg" alt="Mountains">
-        </div>
+        <a href="#contact" class="arrow-down">&#8897;</a> <!-- Arrow to next section -->
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h3>Contact Us</h3>
-        <form action="submit-form.php" method="POST">
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form action="#">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Your Email">
+
             <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" placeholder="Enter your message here" rows="4"></textarea>
+
             <button type="submit">Submit</button>
         </form>
-        <div class="social-icons">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-        </div>
+        <a href="#home" class="arrow-up">&#8896;</a> <!-- Arrow to go back to top -->
     </section>
-
 </body>
 </html>
-

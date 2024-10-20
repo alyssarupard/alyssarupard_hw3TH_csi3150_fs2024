@@ -1,165 +1,212 @@
-/* General Styles */
-* {
+/* Global styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
     color: #333;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
-/* Hero Section */
-#hero {
-    height: 100vh;
-    background-image: url('img/alaska.jpeg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Arrow styling */
+.arrow-down, .arrow-up, .arrow {
+    display: block;
+    font-size: 2.5rem;
     text-align: center;
-    color: white;
-}
-
-#hero h1 {
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
-}
-
-#hero h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.scroll-down {
-    font-size: 2rem;
-    color: #fff;
+    color: #ffcc00;
     text-decoration: none;
+    margin: 20px 0;
+    cursor: pointer;
 }
 
-/* Introduction Section */
-#intro {
-    background-color: #89aeb5;
-    padding: 50px;
-    text-align: center;
-    color: white;
+.arrow:hover {
+    color: #e6b800;
 }
 
-.cta-button {
+/* Button styling */
+.button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #ffba08;
+    background-color: #ffcc00;
     color: #333;
-    text-decoration: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
     border-radius: 5px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
 }
 
-/* Experiences Section */
-#experiences {
-    padding: 50px;
+.button:hover {
+    background-color: #e6b800;
+    color: #333;
+}
+
+/* Header section */
+.header {
+    background-image: url(img/detroitCity.jpeg);
+    background-size: cover;
     text-align: center;
-    background-color: #333;
-    color: white;
+    color: #fff;
+    padding: 50px 0;
+    position: relative;
 }
 
-.experience-cards {
-    display: flex;
-    justify-content: space-around;
+.header .center {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+}
+
+.title {
+    font-size: 3em;
     margin-top: 20px;
 }
 
-.card {
-    flex-basis: 30%;
+/* Intro section */
+.intro {
+    padding: 50px;
     text-align: center;
+    background-color: #4f545a;
+    color: #fff;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Destinations section */
+.destinations {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.destinations h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Card styles */
+.card {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures the image fits properly */
+    border-radius: 8px;
 }
 
-/* Bears, Trains & Icebergs Section */
-#bears-trains {
-    background-color: #e0d5b6;
-    padding: 50px;
-    text-align: center;
+.card h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
 }
 
-/* Statistics Section */
-#statistics {
-    background-image: url('img/stats-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px;
-    color: white;
-    display: flex;
-    justify-content: space-around;
+/* Checkbox and label for showing text */
+input[type="checkbox"] {
+    display: none;
 }
 
-.stat h4 {
-    font-size: 4rem;
-    color: #ffba08;
+input[type="checkbox"]:checked + .arrow + .description {
+    display: block;
 }
 
-/* Testimonials Section */
-#testimonials {
+label.arrow {
+    cursor: pointer;
+}
+
+/* Hidden description by default */
+.description {
+    display: none;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+/* Testimonial section */
+.testimonial {
     background-color: #333;
+    color: #fff;
     padding: 50px;
-    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+.testimonial blockquote {
+    font-size: 1.5em;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 20px;
+    font-style: normal;
+}
+
+/* Contact form */
+.contact {
+    padding: 50px;
+    background-color: #4f545a;
+    color: #fff;
     text-align: center;
 }
 
-/* Gallery Section */
-#gallery {
-    background-color: #222;
-    padding: 50px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-}
-
-/* Contact Section */
-#contact {
-    background-color: #444;
-    color: white;
-    padding: 50px;
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
+.contact form {
     max-width: 600px;
     margin: 0 auto;
 }
 
-form input, form textarea {
-    margin-bottom: 20px;
-    padding: 10px;
+.contact label {
+    display: block;
+    margin: 20px 0 5px;
 }
 
-form button {
-    padding: 10px;
-    background-color: #ffba08;
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.contact button {
+    background-color: #ffcc00;
     color: #333;
     border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
 }
 
-/* Social Icons */
-.social-icons {
-    margin-top: 20px;
+.contact button:hover {
+    background-color: #e6b800;
 }
 
-.social-icons img {
-    width: 40px;
-    margin: 0 10px;
-}
+/* Footer arrow to scroll back to top */
+.arrow-up {
